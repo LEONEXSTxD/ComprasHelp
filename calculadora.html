@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<head>
+
+  <!-- Esta tag indica ao browser que a página vair usar caracteres Unicode, para exibir letras com acentos e cedilha, por exemplo. -->
+  <meta charset="utf-8">
+
+  <!-- Esta tag força o IE a usar as definições de CSS mais recentes, e evita que ele quebre o visual quando estiver no Modo de Compatibilidade.-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- O site ocupar todo o espaço disponível na janela de qualquer dispositivo design responsivo e o mobile-first-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!--  referências ao jQuery e aos plug-ins do Bootstrap. O jQuery deve sempre vir antes do Js do Bootstrap, porque o Bootstrap depende dele. -->
+  <script src="js/jquery.js"></script>
+
+  <title> Calculadora </title>
+</head>
+
+<body>
+
+
+  <!-- barra de navegação com os botões e tal-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" ><img src="./img/logo.jpg" alt="Smiley face" height="42" width="42" </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"> <img src="./img/home1.jpg" alt="Smiley face" height="42" width="42"> </a></li>
+          <li><a href="calculadora.html"> <img src="./img/calculadora1.jpg" alt="Smiley face" height="42" width="42"> </a></li>
+          <li><a href="lista.html"> <img src="./img/a.jpg" alt="Smiley face" height="42" width="42"> </a></li>
+        </ul>
+        <br />
+
+        <form class="form-inline pull-xs-right">
+
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <div class="row">
+      
+      <div class="col-md-12">
+        <h1>Calcular IMC</h1>
+      </div>
+      <hr />
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <h3>Qual sexo?</h3>
+        <input type="text" />
+      </div>             
+      <div class="col-md-3">
+       <h3>Qual sua idade?</h3>
+       <input type="text" />
+     </div> 
+     <div class="col-md-3">
+      <h3>Qual seu peso?</h3>
+      <input type="text" />
+    </div>
+    <div class="col-md-3">
+      <h3>Qual sua altura?</h3>
+      <input type="text" />
+    </div>
+    
+    <div class="col-md-1">
+      <h3></h3>
+      <button>Calcular IMC</button>
+    </div>    
+    
+  </div>
+</div>
+<hr/>
+
+<!-- gasto calorico-->
+<div class="container text-center">
+  <h1>Calcular calorias diárias</h1>
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Qual sexo?</h3>
+      <input type="text" />
+    </div>
+    <div class="col-md-3">
+      <h3>Qual sua idade?</h3>
+      <input type="text" />
+    </div>
+    <div class="col-md-3">
+      <h3>Qual seu peso?</h3>
+      <input type="text" />
+    </div>
+    <div class="col-md-3">
+      <h3>Qual sua altura?</h3>
+      <input type="text" />
+    </div>
+
+    <div class="col-md-1">
+      <h3></h3>
+      <button>Calcular calorias</button>
+    </div>
+
+  </div>
+</div>
+
+<hr>
+</div>
+
+
+
+<!-- empresas parceiras-->
+<div class="container text-center">    
+  <h3>Empresas que podem ser uteis</h3>
+  <br>
+  <div class="row">
+
+    <div class="col-sm-4">
+     <a href="http://www.extra.com.br/" target="parent"><img src="./img/extra.png" title="Yahoo Respostas" 
+      border="none" class="img-responsive" style="width:50%" alt="Image"/></a> 
+    </div>
+    <div class="col-sm-4">
+      <a href="https://www.walmart.com.br/" target="parent"><img src="./img/wallmart.png" title="Yahoo Respostas" 
+        border="none" class="img-responsive" style="width:50%" alt="Image"/></a> 
+      </div>
+      <div class="col-sm-4"> 
+       <a href="http://www.americanas.com.br/" target="parent"><img src="./img/americanas.jpg" title="Yahoo Respostas" 
+        border="none" class="img-responsive" style="width:50%" alt="Image"/></a>   
+      </div>
+    </div>  
+  </div>
+
+  <hr>
+</div>
+
+</body>
+<!-- Este é a referência ao CSS do Bootstrap. Perceba que eu coloquei a versão minified (*.min.css). Esse link é obrigatório -->
+<script src="js/bootstrap.min.js"></script>
+
+</html>
