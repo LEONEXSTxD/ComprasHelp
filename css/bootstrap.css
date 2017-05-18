@@ -4,6 +4,39 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+   .navbar-icones {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 30px;
+  line-height: 20px;
+}
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -237,9 +270,6 @@ th {
   h2,
   h3 {
     page-break-after: avoid;
-  }
-  .navbar {
-    display: none;
   }
   .btn > .caret,
   .dropup > .btn > .caret {

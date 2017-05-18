@@ -1,160 +1,132 @@
 ﻿<!DOCTYPE html>
-
+<html lang="en">
 <head>
-
-  <!-- Esta tag indica ao browser que a página vair usar caracteres Unicode, para exibir letras com acentos e cedilha, por exemplo. -->
+  
+   <!-- Esta tag indica ao browser que a p�gina vair usar caracteres Unicode, para exibir letras com acentos e cedilha, por exemplo. -->
   <meta charset="utf-8">
 
-
-  <!-- Esta tag força o IE a usar as definições de CSS mais recentes, e evita que ele quebre o visual quando estiver no Modo de Compatibilidade.-->
+  <!-- Esta tag for�a o IE a usar as defini��es de CSS mais recentes, e evita que ele quebre o visual quando estiver no Modo de Compatibilidade.-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-  <!-- O site ocupar todo o espaço disponível na janela de qualquer dispositivo design responsivo e o mobile-first-->
+  <!-- O site ocupar todo o espa�o dispon�vel na janela de qualquer dispositivo design responsivo e o mobile-first-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="css/bootstrap.css" rel="stylesheet">
 
-  <!--  referências ao jQuery e aos plug-ins do Bootstrap. O jQuery deve sempre vir antes do Js do Bootstrap, porque o Bootstrap depende dele. -->
+  <!--  refer�ncias ao jQuery e aos plug-ins do Bootstrap. O jQuery deve sempre vir antes do Js do Bootstrap, porque o Bootstrap depende dele. -->
   <script src="js/jquery.js"></script>
+  
+  <!-- Este � a refer�ncia ao js do Bootstrap. Perceba que eu coloquei a vers�o minified (*.min.css). Esse link � obrigat�rio -->
+  <script src="js/bootstrap.min.js"></script>
 
+<!-- fun��es -->
+<script src="js/funcoes.js"></script>
 
-
-  <title> Home </title>
 </head>
-
 <body>
 
-  <!-- barra de navegação com os botões e tal-->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" ><img src="./img/logo.jpg" alt="Smiley face" height="42" width="42" </a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html"> <img src="./img/home1.jpg" alt="Smiley face" height="42" width="42"> </a></li>
-          <li><a href="calculadora.html"> <img src="./img/calculadora1.jpg" alt="Smiley face" height="42" width="42"> </a></li>
-          <li><a href="lista.html"> <img src="./img/a.jpg" alt="Smiley face" height="42" width="42"> </a></li>
-        </ul>
-
-        <br/>
-
-        <form class="form-inline pull-xs-right">
-
-          <input class="form-control" type="text" placeholder="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-
-        </form>
-
-      </div>
+<!-- barra de navega��o com os bot�es e tal-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></a>
     </div>
-  </nav>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li> <a href="lista.html">CRIAR LISTA</a></li>
+        <li><a href="calculadora.html">DIVIRTA-SE</a></li>
+        <li><a href="#">CHAT</a></li>
+        <li> <form class="form-inline pull-xs-right">
+          <input class="form-control" type="text" placeholder="Pesquisar">
+          <button class="btn btn-outline-success" type="submit" onclick="teste()">Pesquisar</button>
+        </form>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-          <!-- indicadores do carrossel -->
+    </div>
+  </div>
+</nav>
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+    <!-- indicadores do carrossel -->
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
 
-          <!-- Imagens do carrossel -->
-          <div class="carousel-inner" role="listbox">
+    <!-- Imagens do carrossel -->
+    <div class="carousel-inner" role="listbox">
             <div class="item active">
-             <img src="./img/carrossel-tablet.jpg" alt="Smiley face" height="1600" width="800">
+             <img src="./img/carrossel-lista.png" alt="Image" >
+            <div class="carousel-caption">
+              <h2>Liste alimentos de maneira f�cil</h2>
+            </div>     
+          </div>
+ 
+ <!-- Imagens do carrossel -->
+          <div class="item">
+            <img src="./img/carrossel-alimentos.jpg" alt="Image">
+            <div class="carousel-caption">
+              <h2>Diversos alimentos ao seu alcance</h2>
+            </div>      
+          </div>
+ 
+ <!-- Imagens do carrossel -->
+          <div class="item">
+           <img src="./img/carrossel-tablet.jpg" alt="Image" >
              <div class="carousel-caption">
-              <h3>Compre onde estiver!</h3>
-            </div>      
-          </div>
-
-          <div class="item">
-            <img src="./img/carrossel-alimentos.jpg" alt="Smiley face" height="1600" width="800">
-            <div class="carousel-caption">
-              <h3>Diversos alimentos ao seu alcance</h3>
-            </div>      
-          </div>
-
-          <div class="item">
-            <img src="./img/carrossel-lista.png" alt="Smiley face" height="1600" width="800">
-            <div class="carousel-caption">
-              <h3>Liste alimentos de maneira fácil</h3>
-            </div>      
+              <h2>Compre onde estiver!</h2>
+            </div>        
           </div>
         </div>
-        <!-- controle de transições do carrossel -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
 
-
-    <!-- links laterais do carrossel-->
-    <div class="col-sm-4">
-
-      <div>
-        <p><h3>Sites úteis</h3></p>
-      </div>
-
-      <div class="well">
-        <p><a href="https://www.yazio.com/pt/alimentos" target="_blanck">Informação nutricionais</a></p>
-      </div>
-      <div class="well">
-        <p><a href="http://www.vix.com/pt/bdm/corpo/top-10-exercicios-fisicos-que-fazem-bem-a-saude-e-ajudam-a-emagrecer" target="_blanck">Exercicios para a saúde</a></p>
-      </div>
-      <div class="well">
-        <p><a href="https://incrivel.club/admiracao-curiosidades/12-curiosidades-sobre-alimentos-que-voce-vai-querer-saber-110960/" target="_blanck">Curiosidades</a></p>
-      </div>
-    </div>
-  </div>
-  <hr>
+    <!-- controle de transi��es do carrossel -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 </div>
-
-
-<!-- empresas parceiras-->
+  
 <div class="container text-center">    
-  <h3>Empresas que podem ser uteis</h3>
-  <br>
+  <h3>What We Do</h3><br>
   <div class="row">
-
     <div class="col-sm-4">
-     <a href="http://www.extra.com.br/" target="parent"><img src="./img/extra.png" title="Yahoo Respostas" 
-      border="none" class="img-responsive" style="width:50%" alt="Image"/></a> 
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Current Project</p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Project 2</p>    
     </div>
     <div class="col-sm-4">
-      <a href="https://www.walmart.com.br/" target="parent"><img src="./img/wallmart.png" title="Yahoo Respostas" 
-        border="none" class="img-responsive" style="width:50%" alt="Image"/></a> 
+      <div class="well">
+       <p>Some text..</p>
       </div>
-      <div class="col-sm-4"> 
-       <a href="http://www.americanas.com.br/" target="parent"><img src="./img/americanas.jpg" title="Yahoo Respostas" 
-        border="none" class="img-responsive" style="width:50%" alt="Image"/></a>   
+      <div class="well">
+       <p>Some text..</p>
       </div>
-    </div>  
+    </div>
   </div>
+</div><br>
 
-  <hr>
-</div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
 
 </body>
-<!-- Este é a referência ao CSS do Bootstrap. Perceba que eu coloquei a versão minified (*.min.css). Esse link é obrigatório -->
-<script src="js/bootstrap.min.js"></script>
-
 </html>
