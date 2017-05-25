@@ -1,0 +1,25 @@
+body{
+
+	background: #eee;
+	padding: 0;
+	margin: 0;
+}
+.col-md-1{
+	background: #fff;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1rem;
+}
+.btn1{
+	background: #6495ED;
+	border: none;
+	color: #fff;
+	padding:  10px 10px;
+	border-radius: 3px;
+}
+//Quando mouse passa por cima 
+.btn1:hover{
+	background-color: #0000CD;
+	color: #fff;
+}
