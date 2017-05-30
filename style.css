@@ -4,12 +4,42 @@ body{
 	padding: 0;
 	margin: 0;
 }
+.container-fluid {
+    background: #171616;
+    width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.navbar {
+    background: #000000;
+    padding: 0;
+}
+.act{
+    background: #000000;
+    color: #fff;
+    padding: 0;
+}
 .col-md-1{
-	background: #fff;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 1rem;
+
+}
+.col-md-2 {
+    width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 30px 30px
+    padding: 1rem;
+}
+.col-md-3{
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 30px 30px
+    padding: 1rem;
 }
 .btn1{
 	background: #6495ED;
@@ -17,9 +47,23 @@ body{
 	color: #fff;
 	padding:  10px 10px;
 	border-radius: 3px;
-}
-//Quando mouse passa por cima 
+} 
 .btn1:hover{
 	background-color: #0000CD;
 	color: #fff;
+}
+#idade {
+    width: 50%;
+    margin: auto;
+    padding: 15px 10px;
+}
+#peso {
+    width: 50%;
+    margin: auto;
+    padding: 15px 10px;
+}
+#altura {
+    width: 50%;
+    margin: auto;
+    padding: 15px 10px;
 }
