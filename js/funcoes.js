@@ -81,9 +81,6 @@ function AddElementoIncluir(BlocoElementos) {
 	document.getElementById('incluir_marca').value='';
 	$("#"+"incluir_total_maximo").html("Total");
 }
-function calcularIMC(){
-    var idade = ("#" + "idadeIMC").val;
-}
 //Cálculo do total
 function calcularMaximoTotal(){
 
@@ -148,4 +145,4 @@ function converteMoedaFloat(valor){
       }
       return valor;
 
-}
+   }
