@@ -42,9 +42,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">HOME</a></li>
-        <li class="active"> <a href="lista.html">CRIAR LISTA</a></li>
-        <li><a href="calculadora.html">DIVIRTA-SE</a></li>
+        <li class="active"><a href="index.html">HOME</a></li>
+        <li> <a href="lista.html">CRIAR LISTA</a></li>
+        <li><a href="index.html">DIVIRTA-SE</a></li>
         <li><a href="#">CHAT</a></li>
         <li> <form class="form-inline pull-xs-right">
           <input class="form-control" type="text" placeholder="Pesquisar">
@@ -61,7 +61,7 @@
 </nav>
 
   <div class="container text-center">
-   
+   <form id="form_lista">
     <div class="row">
       <div class="col-md-12">
          <h1>Criar lista de compras</h1>
@@ -103,7 +103,7 @@
                  <div class="col-md-1">
                     <div class="form-group">    
                         <br>
-                        <button onclick="AddElementoIncluir('bloco_papeis')">incluir</button>
+                        <button type="button" class="btn btn-fill" onclick="AddElementoIncluir('bloco_papeis')">incluir</button>
                     </div>
                  </div>
                </div>
@@ -112,10 +112,11 @@
           </form>
           <div class"row">
             <div class="col-md-12">
-              <button type="button" class="btn btn-fill">Imprimir</button>
+              <button type="button" class="btn btn-fill" onclick="imprimir()">Imprimir</button>
             </div>
           </div>
         </div>
+</form>
 </div>
 
   <hr>

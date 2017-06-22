@@ -1,18 +1,50 @@
-
+//variavel global que guarda o valor total da lista
 globalTotal=0;
 
+//função que realiza impressão
 function imprimir() {
-    Window.open("/imprimir.php");
+   
+   if ($("#form_lista").valid()) {
+alert("aaa");
+		$.ajax({
+			type    : "POST",
+			url     : "/imprimir.php",
+			data    : $("#form_lista").serializeArray(),
+			async   : false,
+			success : function (retorno) {
+				if (retorno.indexOf("sucesso") > -1) {
+					
+					document.getElementById("form_lista").reset();
+					
+
+				} else if (retorno.indexOf("erro") > -1) {
+
+				}
+			},
+			error   : function (XMLHttpRequest, textStatus, errorThrown) {
+				alert_error("Erro, Desculpe!");
+			}
+		});
+	}
 }
 
+//função que soma o valor total da lista
 function totalAtual(total){
 globalTotal = globalTotal+converteMoedaFloat(total);
 return ConverterFloatEmMoeda(globalTotal);
 }
 
+//função que subtrai o valor total da lista
+function totalAtualSub(total){
+globalTotal = globalTotal-converteMoedaFloat(total);
+return ConverterFloatEmMoeda(globalTotal);
+}
 
-function limparHTML(IdElemento){
+//função que limpa item da lista
+function limparHTML(IdElemento,idValorTotal){
 
+	var totalLinha  = $("#"+idValorTotal).val();
+	totalAtualSub(totalLinha);
 	$("#" + IdElemento).html("");
 }
 
@@ -28,7 +60,8 @@ function AddElementoIncluir(BlocoElementos) {
     var totalLista =   totalAtual(total); //recebe o valor total e manda para a função
 
     var IdElemento = parseInt(Math.random() * 1000000000);;
-
+    var IdElementoo =IdElemento+1; 
+	var IdElementoT= IdElemento+","+IdElementoo
 	var codigo = 
 	"<div class='row ' style = 'background-color:#f9f9f9;border:5px solid;border-color:white' id='" + IdElemento + "'>"
     			+"<div class='col-md-3'>"
@@ -58,7 +91,7 @@ function AddElementoIncluir(BlocoElementos) {
                 +"<div class='col-md-1'>"
                   +"<div class='form-group text-center'> <br>"
 							+" <label><h5>R$:"+total+"</h5></label>"
-							+"<input type='hidden' name='incluir_total_maximo[]' value ='" + total + "' >"
+							+"<input type='hidden' id='" + IdElementoo + "' name='incluir_total_maximo[]' value ='" + total + "' >"
 						+"</div>"
 					+"</div>"
 					 +"<div class='col-md-1'>"
@@ -70,7 +103,7 @@ function AddElementoIncluir(BlocoElementos) {
                 +"<div class='col-md-1'>"   
                    +"<label></br></label>"
                    +"<br>"
-                    +"<button type='button' onclick='limparHTML(" + IdElemento + ")'>remover</button>"
+                    +"<button type='button' class='btn btn-fill' onclick='limparHTML(" + IdElementoT + ")'>remover</button>"
                 +"</div>"
               +"</div>";
 
@@ -81,6 +114,7 @@ function AddElementoIncluir(BlocoElementos) {
 	document.getElementById('incluir_marca').value='';
 	$("#"+"incluir_total_maximo").html("Total");
 }
+
 //Cálculo do total
 function calcularMaximoTotal(){
 
@@ -99,12 +133,6 @@ function calcularMaximoTotal(){
 	
 	$("#incluir_total_maximo").html(resultado);
 	
-}
-
-function calcularTotal(valor){
-
-var globalTotal = globalTotal+valor;
-//alert();
 }
 
 //CONVERTAR NUMERO FLOAT PARA VALOR MOEDA
@@ -134,6 +162,7 @@ function ConverterFloatEmMoeda(numero) {
 	return retorno;
 }
 
+//converte um valor moeda em valor padrão americano
 function converteMoedaFloat(valor){
       
       if(valor === ""){
@@ -145,4 +174,18 @@ function converteMoedaFloat(valor){
       }
       return valor;
 
-   }
+}
+
+function calcularIMC() {
+
+    var peso = $("#" + "pesoIMC").val();
+    var altura = $("#" + "alturaIMC").val();
+
+    alert(peso + altura);
+
+
+function calcularIMC(){
+    var idade = ("#" + "idadeIMC").val;
+}
+
+}
