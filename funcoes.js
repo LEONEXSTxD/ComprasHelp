@@ -81,9 +81,6 @@ function AddElementoIncluir(BlocoElementos) {
 	document.getElementById('incluir_marca').value='';
 	$("#"+"incluir_total_maximo").html("Total");
 }
-function calcularIMC(){
-    var idade = ("#" + "idadeIMC").val;
-}
 //Cálculo do total
 function calcularMaximoTotal(){
 
@@ -151,11 +148,37 @@ function converteMoedaFloat(valor){
 }
 
 function calcularIMC() {
-
+	var idade = $('#' + "idadeIMC").val();
     var peso = $("#" + "pesoIMC").val();
     var altura = $("#" + "alturaIMC").val();
+    var genero = $('#' + "generoIMC").val();
 
-    alert(peso + altura);
 
+    if (idade < 1 || peso < 1 || altura < 1)  {
+    	alert("Valores Invalidos!!");
+    	System.exit(0);
+    }
+
+    if(altura > 2){
+    	altura = altura / 100;
+    }
+    
+    var imc = peso / (altura * altura);
+    if (imc <= 19){
+    	alert("Seu IMC é de: "+imc.toFixed(2) + " || Abaixo do Peso");
+    }else if (imc > 19 && imc <= 24) {
+    	alert("Seu IMC é de: "+imc.toFixed(2) + " || Peso Saldavél");
+    }else if (imc > 24 && imc <= 29){
+    	alert("Seu IMC é de: "+imc.toFixed(2) + " || Sobrepeso");
+    }else if (imc > 29 && imc <= 34) {
+    	alert("Seu IMC é de: "+imc.toFixed(2) + " || Obeso");
+    }else if (imc > 34) {
+    	alert("Seu IMC é de: "+imc.toFixed(2) + " || Obeso Móbido");
+    }else{
+    	alert("Seu IMC é de: "+imc.toFixed(2));  	
+    }  	 
+
+}
+function calcularCaloriasDiarias(){
 
 }

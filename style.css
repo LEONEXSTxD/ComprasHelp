@@ -65,17 +65,17 @@ body{
 b{
 	text-decoration-style: solid;
 }
-#idade {
+#idadeIMC {
     width: 50%;
     margin: auto;
     padding: 15px 10px;
 }
-#peso {
+#pesoIMC {
     width: 50%;
     margin: auto;
     padding: 15px 10px;
 }
-#altura {
+#alturaIMC {
     width: 50%;
     margin: auto;
     padding: 15px 10px;
